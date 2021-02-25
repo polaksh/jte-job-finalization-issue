@@ -1,3 +1,4 @@
 source_control_management()
 build_setup()
 execute_build()
+integration_tests()
