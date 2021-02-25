@@ -1,3 +1,5 @@
 void call(){
-    echo 'TESTS'
+    stage('tests'){
+        echo 'TESTS'
+    }
 }
