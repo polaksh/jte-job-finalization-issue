@@ -43,4 +43,6 @@ void cleanup(){
         teamDomain: 'transmitsecurity.slack.com',
         blocks: ${message}
     )"""
+
+    println groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(pipelineConfig))
 }
