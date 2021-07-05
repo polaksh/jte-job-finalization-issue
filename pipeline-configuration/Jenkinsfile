@@ -1,4 +1,32 @@
-source_control_management()
-build_setup()
-execute_build()
-integration_tests()
+pipeline{
+    agent {
+      kubernetes {
+        cloud 'kubernetes'
+        defaultContainer 'jnlp'
+        inheritFrom 'default'
+      }
+    }
+
+    stages{
+        stage('Pull'){
+            steps{
+                source_control_management()
+            }
+        }
+        stage('Setup'){
+            steps{
+                build_setup()
+            }
+        }
+        stage('Build'){
+            steps{
+                execute_build()
+            }
+        }
+        stage('Integration Tests'){
+            steps{
+                integration_tests()
+            }
+        }
+    }
+}
