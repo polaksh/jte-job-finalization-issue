@@ -4,6 +4,6 @@ void call(){
     // pipelineConfig.description = groovy.json.JsonOutput.toJson([message: '!!! EVEN NUMBERS ARE THE DEVIL !!!'])
     //     error '!!! EVEN NUMBERS ARE THE DEVIL !!!'
     // }
-
-    pipelineConfig.description = [message: "${BUILD_NUMBER} --- foo"]
+    def lst = ['a','b','c','d','e','f']
+    pipelineConfig.bar = lst.collect{i-> "${env.JOB_NAME}_${i}_${env.BUILD_NUMEBR}"}
 }
