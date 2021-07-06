@@ -5,5 +5,5 @@ void call(){
     //     error '!!! EVEN NUMBERS ARE THE DEVIL !!!'
     // }
     def lst = ['a','b','c','d','e','f']
-    pipelineConfig.bar = lst.collect{i-> "${env.JOB_NAME}_${i}_${env.BUILD_NUMEBR}"}
+    pipelineConfig.bar = lst.collect{i-> "${env.JOB_NAME}_${i}_${env.BUILD_NUMEBR}".toString()}
 }
