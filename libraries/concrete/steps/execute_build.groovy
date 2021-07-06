@@ -5,5 +5,5 @@ void call(){
     //     error '!!! EVEN NUMBERS ARE THE DEVIL !!!'
     // }
 
-    pipelineConfig.description = [message: '!!! EVEN NUMBERS ARE THE DEVIL !!!']
+    pipelineConfig.description = [message: "${BUILD_NUMBER} --- foo"]
 }
